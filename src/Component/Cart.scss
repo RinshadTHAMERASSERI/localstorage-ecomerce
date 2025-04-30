@@ -80,6 +80,7 @@
   border-radius: 12px;
   background-color: #fafafa;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  height: 350px;
 }
 
 .div3 p {
@@ -102,6 +103,16 @@
   color: green;
   padding: 15px;
 }
+.button{
+  margin-left: 20%;
+  margin-top: 6%;
+  height:15%;
+  width: 60%;
+  background-color:#FF9F00;
+  border: none;
+  color: white;
+ 
+}
 
 /* Responsive Design */
 @media (min-width: 768px) {
@@ -114,6 +125,7 @@
     margin-left: 20%;
   }
 }
+
 
 @media (max-width: 767px) {
   .cart2 {
@@ -129,4 +141,5 @@
   .table {
     margin-left: 0;
   }
+ 
 }

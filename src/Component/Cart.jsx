@@ -1,9 +1,13 @@
 import React, { useEffect, useState } from 'react'
-import { data, useParams } from 'react-router-dom'
-import { Link } from 'react-router-dom'
+// import { data, useParams } from 'react-router-dom'
+// import { Link } from 'react-router-dom'
 import './Cart.scss'
+import { useNavigate } from 'react-router-dom';
+
 
 function Cart() {
+  
+const navigate = useNavigate()
   const [cartItems, setCartItems] = useState([]);
 
   useEffect(() => {
@@ -24,6 +28,15 @@ console.log(result);
 
 let item = cartItems.length
 console.log("item",item);
+
+const PlaceHolder = ()=>{
+  alert("order placed succesfully")
+  localStorage.removeItem('cart')
+  // location.reload();
+  navigate("/")
+  
+
+}
 // const totalItems = cartItems.reduce((acc,item)=>acc+item.)
 
 
@@ -84,6 +97,7 @@ console.log("item",item);
         </table>
         <hr />
         <p>Total: ${result}</p>
+        <button className='button' onClick={PlaceHolder}>PLACE ORDER</button>
        
       </div>
      
